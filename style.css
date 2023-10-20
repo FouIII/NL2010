@@ -25,6 +25,8 @@ main {
 
 body {
 	margin: 0;
+	/* background-image: url("./img/img8.jpg"); */
+	/* background-position: center; */
 	--color-text: #d05400;
     --color-bg: #0c0c0c;
     --color-link: #6b5537;
@@ -39,6 +41,19 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+body::after {
+	content: "";
+	background: url("./img/img7.jpg");
+	background-position: center;
+	opacity: 0.4;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;   
+  }
 
 .demo-2 {
 	--color-text: #000000;
@@ -205,6 +220,7 @@ a:focus {
 	background-size: cover;
 	background-position: 50% 50%;
 	z-index: 100;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .grid--img .grid__item-img {
@@ -217,11 +233,11 @@ a:focus {
 /* Shorthand grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end */
 
 .pos-1 {
-	grid-area: 10 / 1 / 26 / 7;
+	grid-area: 8 / 2 / 24 / 8;
 }
 
 .pos-2 {
-	grid-area: 1 / 18 / 9 / 27;
+	grid-area: 1 / 22 / 12 / 33;
 }
 
 .pos-3 {
@@ -229,31 +245,31 @@ a:focus {
 }
 
 .pos-4 {
-	grid-area: 13 / 11 / 32 / 18;
+	grid-area: 10 / 10 / 30 / 18;
 }
 
 .pos-5 {
-	grid-area: 17 / 32 / 32 / 38;
+	grid-area: 17 / 20 / 35 / 28;
 }
 
 .pos-6 {
-	grid-area: 20 / 46 / 28 / 51;
+	grid-area: 18 / 40 / 30 / 50;
 }
 
-.pos-7 {
-	grid-area: 43 / 1 / 51 / 10;
+.pos-7 {	
+	grid-area: 35 / 4 / 48 / 15;
 }
 
 .pos-8 {
-	grid-area: 38 / 14 / 46 / 22;
+	grid-area: 37 / 18 / 47 / 27;
 }
 
 .pos-9 {
-	grid-area: 40 / 26 / 51 / 32;
+	grid-area: 23 / 30 / 41 / 37;
 }
 
 .pos-10 {
- 	grid-area: 37 / 39 / 48 / 47;
+ 	grid-area: 37 / 39 / 48 / 48;
 }
 
 .content__title {
@@ -263,14 +279,18 @@ a:focus {
 	margin: 10px 0;
 	line-height: 1;
 	position: relative;
+	text-shadow: 2px 2px 5px green;
 }
 
 .content__title-sub {
+	text-align: center;
 	color: var(--color-content-title-sub);
 	font-size: 4vw;
 	display: block;
 	margin-left: 3vw;
 	line-height: 0.5;
+	text-shadow: 2px 2px 5px red;
+	margin-bottom: 35px;
 }
 
 .cursor {
